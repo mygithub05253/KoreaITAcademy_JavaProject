@@ -1,0 +1,19 @@
+package com.market.page;
+
+import javax.swing.*;
+
+import com.market.bookItem.BookInit;
+import com.market.cart.Cart;
+import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+// 주문 영수증 표시 클래스 작성
+public class CartOrderBillPage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

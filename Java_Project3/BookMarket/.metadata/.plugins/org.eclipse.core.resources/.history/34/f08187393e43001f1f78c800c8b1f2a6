@@ -1,0 +1,34 @@
+package com.market.page;
+
+import javax.swing.*;
+import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+// 관리자 클래스 작성
+public class AdminPage extends JPanel {
+	
+	public AdminPage(JPanel panel) {
+		Font ft;
+		ft = new Font("함초롬돋움", Font.BOLD, 15);
+		
+		setLayout(null);
+		
+		Rectangle rect = panel.getBounds();
+		System.out.println(rect);
+		setPreferredSize(rect.getSize());
+		
+		Date date = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyMMddhhmmss");
+		String strDate = formatter.format(date);
+		
+		// 도서ID 표시를 위한 패널 영역 설정 및 출력
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

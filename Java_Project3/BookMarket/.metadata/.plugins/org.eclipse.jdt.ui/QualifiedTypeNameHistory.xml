@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.awt.event.WindowAdapter"/>
+    <fullyQualifiedTypeName name="java.awt.event.WindowEvent"/>
+    <fullyQualifiedTypeName name="com.market.cart.Cart"/>
+    <fullyQualifiedTypeName name="com.market.bookItem.BookInit"/>
+    <fullyQualifiedTypeName name="com.market.page.CartAddItemPage"/>
+    <fullyQualifiedTypeName name="com.market.page.CartItemListPage"/>
+    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+    <fullyQualifiedTypeName name="javax.swing.table.TableModel"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+    <fullyQualifiedTypeName name="com.market.page.CartShippingPage"/>
+    <fullyQualifiedTypeName name="com.market.member.UserInit"/>
+    <fullyQualifiedTypeName name="com.market.page.AdminPage"/>
+    <fullyQualifiedTypeName name="com.market.member.Admin"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+</qualifiedTypeNameHistroy>

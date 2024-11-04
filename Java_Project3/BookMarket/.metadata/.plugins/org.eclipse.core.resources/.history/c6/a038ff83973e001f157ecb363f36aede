@@ -1,0 +1,24 @@
+// 장바구니 처리 클래스 작성
+// CartInterface 인터페이스의 자식 클래스
+public class Cart implements CartInterface {
+	static final int NUM_BOOK = 3;
+	CartItem[] mCartItem = new CartItem[NUM_BOOK];
+	static int mCartCount = 0;
+	
+	public Cart() {
+		
+	}
+	
+	public void printBookList(Book[] bookList) {
+		for(int i = 0; i < bookList.length; i++) {
+			System.out.print(bookList[i].getBookID() + " | ");
+			System.out.print(bookList[i].getName() + " | ");
+			System.out.print(bookList[i].getUnitPrice() + " | ");
+			System.out.print(bookList[i].getAuthor() + " | ");
+			System.out.print(bookList[i].getDescription() + " | ");
+			System.out.print(bookList[i].getCategory() + " | ");
+			System.out.print(bookList[i].getReleaseDate() + " | ");
+			System.out.println("");
+		}
+	}
+}

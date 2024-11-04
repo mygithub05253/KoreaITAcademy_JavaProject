@@ -1,0 +1,145 @@
+package com.market.main;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import com.market.page.GuestInfoPage;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import com.market.cart.Cart;
+import com.market.bookItem.BookInit;
+import com.market.page.CartAddItemPage;
+
+// 메뉴 버튼 구성 클래스 작성
+public class MainWindow extends JFrame {
+	
+	static Cart mCart;
+	static JPanel mMenuPanel, mPagePanel;
+	
+	public MainWindow(String title, int x, int y, int width, int height) {
+		initContainer(title, x, y, width, height);
+		setVisible(true);
+		setResizable(true);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setIconImage(new ImageIcon("./images/shop.png").getImage());
+	}
+	
+	private void initContainer(String title, int x, int y, int width, int height) {
+		setTitle(title);
+		setBounds(x, y, width, height);
+		setLayout(null);
+		
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		// 컴퓨터 화면에 맞춰서 프레임 창을 화면 중앙에 출력
+		setLocation((screenSize.width - 1000) / 2, (screenSize.height - 750) / 2);
+		
+		// 메뉴 버튼 표시를 위한 프레임 상단의 패널 영역 설정 및 출력
+		mMenuPanel = new JPanel();
+		mMenuPanel.setBounds(0, 20, width, 130);
+		menuIntroduction();
+		add(mMenuPanel);
+		
+		// 메뉴 버튼별 클릭 시 페이지 표시를 위한 프레임 하단의 패널 영역 설정 및 출력
+		mPagePanel = new JPanel();
+		mPagePanel.setBounds(0, 150, width, height);
+		add(mPagePanel);
+	}
+	
+	private void menuIntroduction() {
+		
+		mCart = new Cart();
+		
+		Font ft;
+		ft = new Font("함초롬돋움", Font.BOLD, 15);
+		
+		// <고객 정보 확인하기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button1 = new JButton("고객 정보 확인하기", new ImageIcon("./images/1.png"));
+		button1.setBounds(0, 0, 100, 50);
+		button1.setFont(ft);
+		mMenuPanel.add(button1);
+		
+		// <고객 정보 확인하기> 버튼 클릭 이벤트 처리 작성
+		button1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// 패널에 표시된 구성 요소 전부 삭제
+				mPagePanel.removeAll();
+				mPagePanel.add("고객 정보 확인", new GuestInfoPage(mPagePanel));
+				
+				// 패널에 GuestInfoPage 내용 출력
+				// 구성 요소의 가로세로 속성을 변경하여 호출
+				mPagePanel.revalidate();
+				// 구성 요소의 모양을 변경하여 호출
+				mPagePanel.repaint();
+			}
+		});
+		
+		// <장바구니 상품 목록 보기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button2 = new JButton("장바구니 상품 목록 보기", new ImageIcon("./images/2.png"));
+		button2.setBounds(0, 0, 100, 30);
+		button2.setFont(ft);
+		mMenuPanel.add(button2);
+		
+		// <장바구니 비우기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button3 = new JButton("장바구니 비우기", new ImageIcon("./images/3.png"));
+		button3.setBounds(0, 0, 100, 30);
+		button3.setFont(ft);
+		mMenuPanel.add(button3);
+		
+		// <장바구니에 항목 추가하기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button4 = new JButton("장바구니에 항목 추가하기", new ImageIcon("./images/4.png"));
+		button4.setFont(ft);
+		mMenuPanel.add(button4);
+		
+		// <장바구니에 항목 추가하기> 버튼 클릭 이벤트 처리 작성
+		button4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// 패널에 표시된 구성 요소 전부 삭제
+				mPagePanel.removeAll();
+				mPagePanel.add("고객 정보 확인", new GuestInfoPage(mPagePanel));
+				
+				// 패널에 GuestInfoPage 내용 출력
+				// 구성 요소의 가로세로 속성을 변경하여 호출
+				mPagePanel.revalidate();
+				// 구성 요소의 모양을 변경하여 호출
+				mPagePanel.repaint();
+			}
+		});
+		
+		// <장바구니의 항목 수량 줄이기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button5 = new JButton("장바구니의 항목 줄이기", new ImageIcon("./images/5.png"));
+		button5.setFont(ft);
+		mMenuPanel.add(button5);
+		
+		// <장바구니의 항목 삭제하기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button6 = new JButton("장바구니의 항목 삭제하기", new ImageIcon("./images/6.png"));
+		button6.setFont(ft);
+		mMenuPanel.add(button6);
+		
+		// <주문하기> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button7 = new JButton("주문하기", new ImageIcon("./images/7.png"));
+		button7.setFont(ft);
+		mMenuPanel.add(button7);
+		
+		// <종료> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button8 = new JButton("종료", new ImageIcon("./images/8.png"));
+		button8.setFont(ft);
+		mMenuPanel.add(button8);
+		
+		// <관리자> 버튼 표시를 위한 패널 영역 설정 및 출력
+		JButton button9 = new JButton("관리자", new ImageIcon("./images/9.png"));
+		button9.setFont(ft);
+		mMenuPanel.add(button9);
+		
+		// 메뉴 버튼 구성 프레임 처리하기
+		// 프레임 닫기(x) 버튼의 클릭 이벤트 처리 작성
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// 현재 프레임 감추기
+				setVisible(false);
+				new GuestWindow("고객 정보 입력", 0, 0, 1000, 750);
+			}
+		});
+	}
+}

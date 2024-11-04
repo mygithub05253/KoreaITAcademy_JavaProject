@@ -1,0 +1,34 @@
+package com.market.page;
+
+import javax.swing.*;
+import com.market.cart.Cart;
+import com.market.cart.CartItem;
+import java.awt.*;
+import java.util.ArrayList;
+
+// 장바구니 상품 목록 보기 클래스 작성
+public class CartItemListPage extends JPanel {
+	
+	JTable cartTable;
+	Object[] tableHeader = { "도서ID", "도서명", "단가", "수량", "총가격" };
+	
+	Cart mCart = new Cart();
+	public static int mSelectRow = -1;
+	
+	public CartItemListPage(JPanel panel, Cart cart) {
+		Font ft;
+		ft = new Font("함초롬돋움", Font.BOLD, 15);
+		this.mCart = cart;
+		this.setLayout(null);
+		
+		Rectangle rect = panel.getBounds();
+		System.out.println(rect);
+		this.setPreferredSize(rect.getSize());
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

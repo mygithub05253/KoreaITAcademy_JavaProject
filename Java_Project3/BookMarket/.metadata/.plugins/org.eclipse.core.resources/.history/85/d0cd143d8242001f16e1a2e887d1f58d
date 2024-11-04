@@ -1,0 +1,56 @@
+package com.market.page;
+
+import javax.swing.*;
+import java.awt.*;
+
+// 주문 배송지 입력 클래스 작성
+public class CartShippingPage extends JPanel {
+	
+	JPanel shippingPanel;
+	JPanel radioPanel;
+	
+	public CartShippingPage(JPanel panel) {
+		Font ft;
+		ft = new Font("함초롬돋움", Font.BOLD, 15);
+		
+		setLayout(null);
+		
+		Rectangle rect = panel.getBounds();
+		System.out.println(rect);
+		this.setPreferredSize(rect.getSize());
+		
+		// 고객 정보 라디오버튼 선택 표시를 위한 패널 영역 설정 및 출력
+		radioPanel = new JPanel();
+		radioPanel.setBounds(300, 0, 700, 50);
+		radioPanel.setLayout(new FlowLayout());
+		add(radioPanel);
+		
+		JLabel radioLabel = new JLabel("배송받을 분은 고객 정보와 같습니까?");
+		radioLabel.setFont(ft);
+		
+		JRadioButton radioOk = new JRadioButton("예");
+		radioOk.setFont(ft);
+		JRadioButton radioNo = new JRadioButton("아니요");
+		radioNo.setFont(ft);
+		
+		radioPanel.add(radioLabel);
+		radioPanel.add(radioOk);
+		radioPanel.add(radioNo);
+		
+		// 배송지 입력, 영수증 표시를 위한 패널 영역 설정 및 출력
+		shippingPanel = new JPanel();
+		shippingPanel.setBounds(200, 50, 700, 500);
+		shippingPanel.setLayout(null);
+		add(shippingPanel);
+		
+		radioOk.setSelected(true);
+		radioNo.setSelected(false);
+		UserShippingInfo(true);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

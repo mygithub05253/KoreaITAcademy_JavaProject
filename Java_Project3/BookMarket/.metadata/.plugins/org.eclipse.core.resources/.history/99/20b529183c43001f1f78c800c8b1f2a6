@@ -1,0 +1,19 @@
+package com.market.page;
+
+import javax.swing.*;
+import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class AdminPage extends JPanel {
+	
+	public AdminPage(JPanel panel) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

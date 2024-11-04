@@ -1,0 +1,30 @@
+package com.market.page;
+
+import javax.swing.*;
+import com.market.bookItem.Book;
+import com.market.bookItem.BookInit;
+import com.market.cart.Cart;
+import java.awt.*;
+import java.util.ArrayList;
+
+// 장바구니에 항목 추가 클래스 작성
+public class CartAddItemPage extends JPanel {
+	
+	ImageIcon imageBook;
+	int mSelectRow = 0;
+	
+	Cart mCart;
+	
+	public CartAddItemPage(JPanel panel, Cart cart) {
+		Font ft;
+		ft = new Font("함초롬돋움", Font.BOLD, 15);
+		
+		setLayout(null);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.market.page;
+
+public class CartItemListPage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
