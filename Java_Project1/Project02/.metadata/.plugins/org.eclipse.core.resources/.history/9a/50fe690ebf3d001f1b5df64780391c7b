@@ -1,0 +1,56 @@
+package Image_Control;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class project_code {
+	
+	static int[][] inImage = new int[512][512];
+	static int[][] outImage = new int[512][512];
+	
+	Container contentPane;
+
+	public static void main(String[] args) throws Exception {
+		loadImage();
+		
+		new Photo();
+	}
+	
+	static public void loadImage() throws Exception {
+		int i, j;
+		
+		// 파일 핸들
+		File inFp;
+		
+		// 파일 스트림 핸들
+		FileInputStream inFs;
+		inFp = new File("C://Java_Project1//Project02/prince.raw");
+		
+		// 읽어올 파일 스트림
+		inFs = new FileInputStream(inFp.getPath());
+		
+		// 파일 -> 메모리
+		for(i = 0; i < 512; i++) {
+			for(j = 0; j < 512; j++) {
+				inImage[i][j] = inFs.read();
+				outImage[i][j] = inImage[i][j];
+			}
+		}
+		
+		inFs.close();
+	}
+
+}

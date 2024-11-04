@@ -1,0 +1,32 @@
+package Contact_Management;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class project_code {
+	
+	static String fname = "C://Java_Project1//Project01/juso.txt";
+	
+	static class address {
+		String name;
+		String age;
+		String phone;
+		
+		address(String s1, String s2, String s3) {
+			this.name = s1;
+			this.age = s2;
+			this.phone = s3;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
