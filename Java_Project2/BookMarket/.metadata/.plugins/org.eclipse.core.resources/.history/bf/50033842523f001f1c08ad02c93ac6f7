@@ -1,0 +1,11 @@
+// 장바구니 처리 인터페이스 작성
+
+import com.market.bookItem.Book;
+
+public interface CartInterface {
+	void printBookList(Book[] p);
+	boolean isCartInBook(String id);
+	void insertBook(Book p);
+	void removeCart(int numID);
+	void deleteBook();
+}

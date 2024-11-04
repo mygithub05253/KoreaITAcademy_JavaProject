@@ -1,0 +1,4 @@
+// 장바구니 처리 인터페이스 작성
+public interface CartInterface {
+
+}
