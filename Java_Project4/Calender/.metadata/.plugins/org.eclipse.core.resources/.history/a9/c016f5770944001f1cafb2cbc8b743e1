@@ -1,0 +1,14 @@
+package Source_code;
+
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+
+public class code {
+
+	public static void main(String[] args) {
+		Calendar calendar = Calendar.getInstance();
+		System.out.println("Sun Mon Tue Wed Thu Fri Sat");
+		
+	}
+
+}
